@@ -5,6 +5,7 @@ import Header from '../src/components/Header.jsx';
 import UseLocationWeather from '../src/components/UserLocationWeather.jsx';
 import OtherCountriesWeather from '../src/components/OtherCountriesWeather.jsx';
 import TodayHighlight from '../src/components/TodayHighlight.jsx';
+import Forecast from '../src/components/Forecast.jsx';
 
 createRoot(document.getElementById('root')).render(
   <>
@@ -19,8 +20,12 @@ createRoot(document.getElementById('root')).render(
         </div>
       </div>
       <div className="w-screen mr-[44px]">
-        <TodayHighlight />
+        <div><TodayHighlight /></div>
+        <div>
+        <Forecast/>
       </div>
+      </div>
+      
     </div>
   </>,
 );
