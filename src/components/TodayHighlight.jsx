@@ -21,15 +21,16 @@ function TodayHighlight() {
         return 'Low UV';
       case (3 < data.current.uv) & (data.current.uv < 5):
         return 'Moderate UV';
-      case (6 < data.current.uv)  & (data.current.uv < 7):
+      case (6 < data.current.uv) & (data.current.uv < 7):
         return 'High UV';
       case (8 < data.current.uv) & (data.current.uv < 10):
         return 'Very high UV';
-      case (data.current.uv > 11):
+      case data.current.uv > 11:
         return 'Extreme UV';
       default:
         return 'Unknown status';
-    }}
+    }
+  };
 
   useEffect(() => {
     weatherApi
@@ -104,7 +105,7 @@ function TodayHighlight() {
             </p>
           </div>
         </div>
-        <div className="p-[16px] bg-dark-grey rounded-lg w-[170px]">
+        <div className="p-[16px] bg-dark-grey rounded-lg w-[200px]">
           <div className="flex justify-end mb-4">
             <img src={humidity} />
             <p className="pl-[3px] font-medium">Humidity</p>
@@ -144,12 +145,10 @@ function TodayHighlight() {
             <p className="font-semibold text-2xl">{data.current.uv} UV</p>
           </div>
           <div>
-            <p className="text-end">
-              {getStatusUV(data.current.uv)}
-            </p>
+            <p className="text-end">{getStatusUV(data.current.uv)}</p>
           </div>
         </div>
-        <div className="p-[16px] bg-dark-grey rounded-lg w-[170px]">
+        <div className="p-[16px] bg-dark-grey rounded-lg w-[200px]">
           <div className="flex justify-end mb-4">
             <img src={visibility} />
             <p className="pl-[3px] font-medium">Visibility</p>

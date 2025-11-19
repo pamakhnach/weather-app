@@ -13,6 +13,12 @@ export const weatherApi = {
     );
   },
 
+  getForecast: (cityName) => {
+    return api.get(
+      `forecast.json?key=ba0db9de816d44c3a3a193448231112&q=${cityName}&days=3&aqi=no&alerts=no`,
+    );
+  },
+
   deleteCityWeather: (cityName) => {
     return api.delete(`${cityName}`);
   },

@@ -19,13 +19,14 @@ createRoot(document.getElementById('root')).render(
           <OtherCountriesWeather />
         </div>
       </div>
-      <div className="w-screen mr-[44px]">
-        <div><TodayHighlight /></div>
+      <div className="w-screen mr-[44px] mt-[24px]">
         <div>
-        <Forecast/>
+          <TodayHighlight />
+        </div>
+        <div className="mt-[24px]">
+          <Forecast />
+        </div>
       </div>
-      </div>
-      
     </div>
   </>,
 );

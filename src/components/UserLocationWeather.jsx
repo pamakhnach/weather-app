@@ -77,8 +77,6 @@ function UserLocationWeather() {
     return <div>Error: {error}</div>;
   }
 
-  console.log(weekdays[data.current.is_day]);
-
   return (
     <>
       {data && (
