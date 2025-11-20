@@ -43,32 +43,6 @@ function UserLocationWeather() {
       });
   }, []);
 
-  // useEffect(() => {
-  //   axios
-  //     .get(
-  //       'http://api.weatherapi.com/v1/forecast.json?key=ba0db9de816d44c3a3a193448231112&q=London&days=1&aqi=no&alerts=no',
-  //     )
-  //     .then(function (response) {
-  //       setData(response.data);
-  //       console.log(response);
-  //     })
-  //     .catch(function (error) {
-  //       if (error.response) {
-  //         console.error('Server Error:', error.response.status);
-  //         setError('Server error: ' + error.response.status);
-  //       } else if (error.request) {
-  //         console.error('Network Error:', error.request);
-  //         setError('Network error. Please check your connection.');
-  //       } else {
-  //         console.error('Error:', error.message);
-  //         setError(error.message);
-  //       }
-  //     })
-  //     .finally(() => {
-  //       setLoading(false);
-  //     });
-  // }, []);
-
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -80,9 +54,9 @@ function UserLocationWeather() {
   return (
     <>
       {data && (
-        <div className="flex  bg-dark-black rounded-xl p-[24px] justify-between">
+        <div className="flex  bg-dark-black dark:bg-sky-200 rounded-xl p-[24px] justify-between">
           <div>
-            <div className="flex bg-regal-black rounded-lg py-[9px] px-[16px]">
+            <div className="flex bg-regal-black dark:bg-blue-300 rounded-lg py-[9px] px-[16px]">
               <img src={locationImage} />
               <p className="ps-[8px]">
                 {data.location.name}, {data.location.country}
@@ -100,7 +74,7 @@ function UserLocationWeather() {
           </div>
 
           <div>
-            <button className="flex mb-[54px] bg-regal-black rounded-lg p-[8px]">
+            <button className="flex mb-[54px] bg-regal-black dark:bg-blue-300 cursor-pointer rounded-lg p-[8px]">
               °C
               <img src={profileArrow} />
             </button>

@@ -7,15 +7,16 @@
   --color-dark-grey: #272727;
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   font-family: 'Inter', sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-size: 18px;
+  cursor: default;
 
   color-scheme: light dark;
-  background-color: black;
-  color: white;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

@@ -69,11 +69,11 @@ function OtherCountriesWeather() {
 
   return (
     <>
-      <div className="flex flex-col  bg-dark-black rounded-xl p-[24px]">
+      <div className="flex flex-col  bg-dark-black dark:bg-sky-200 rounded-xl p-[24px]">
         <div className="font-semibold text-2xl mb-[24px]">
           <h1>Other Countries</h1>
         </div>
-        <div className="flex bg-dark-grey rounded-xl p-[24px] mb-[18px] justify-between">
+        <div className="flex bg-dark-grey dark:bg-blue-300 rounded-xl p-[24px] mb-[18px] justify-between">
           <div>
             <p className="text-sm font-regular">
               {data_first.location.country}
@@ -93,7 +93,7 @@ function OtherCountriesWeather() {
             <p>{Math.round(data_first.current.temp_c)}°</p>
           </div>
         </div>
-        <div className="flex bg-dark-grey rounded-xl p-[24px] justify-between">
+        <div className="flex bg-dark-grey dark:bg-blue-300 rounded-xl p-[24px] justify-between">
           <div>
             <p className="text-sm font-regular">
               {data_second.location.country}

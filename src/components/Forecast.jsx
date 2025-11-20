@@ -42,7 +42,7 @@ function Forecast() {
   return (
     <>
       {data && (
-        <div className="bg-dark-black rounded-xl p-[24px]">
+        <div className="bg-dark-black dark:bg-sky-200 rounded-xl p-[24px]">
           <div>
             <p className="mb-4 font-semibold text-2xl">3 Day Forecast</p>
           </div>
@@ -50,7 +50,7 @@ function Forecast() {
             {data.forecast.forecastday.map((forecast, index) => (
               <div
                 key={forecast.date}
-                className="bg-dark-grey rounded-lg flex flex-col items-center justify-between h-[170px] p-[16px]"
+                className="bg-dark-grey dark:bg-blue-300 rounded-lg flex flex-col items-center justify-between h-[170px] p-[16px]"
               >
                 <div className="border-hidden border-white text-sm text-medium">
                   {index == 0 && <p>Today</p>}
@@ -64,7 +64,6 @@ function Forecast() {
                     {Math.round(forecast.day.avgtemp_c)}°C
                   </p>
                 </div>
-                {/* {index < forecast.length - 1 && <hr />} */}
               </div>
             ))}
           </div>
