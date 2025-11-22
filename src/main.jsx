@@ -7,11 +7,8 @@ import OtherCountriesWeather from '../src/components/OtherCountriesWeather.jsx';
 import TodayHighlight from '../src/components/TodayHighlight.jsx';
 import Forecast from '../src/components/Forecast.jsx';
 
-import DarkModeToggle from './section/DarkModeToggle.jsx';
-
 createRoot(document.getElementById('root')).render(
   <div className="bg-black dark:bg-white dark:text-gray-700">
-    <DarkModeToggle />
     <Header />
     <div className="flex">
       <div>

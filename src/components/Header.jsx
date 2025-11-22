@@ -1,6 +1,7 @@
-import switchThemeIcon from '../assets/witchThemeIcon.svg';
 import profileArrow from '../assets/profileArrow.svg';
 import imgProfile from '../assets/imgProfile.svg';
+
+import DarkModeToggle from '../section/DarkModeToggle.jsx';
 
 function Header() {
   return (
@@ -19,7 +20,7 @@ function Header() {
         </div>
         <div>
           <button>
-            <img src={switchThemeIcon} alt="switch theme" />
+            <DarkModeToggle />
           </button>
         </div>
         <div>
