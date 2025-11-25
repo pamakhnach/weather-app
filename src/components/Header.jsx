@@ -2,6 +2,7 @@ import profileArrow from '../assets/profileArrow.svg';
 import imgProfile from '../assets/imgProfile.svg';
 
 import DarkModeToggle from '../section/DarkModeToggle.jsx';
+import SearchInput from '../section/SearchInput.jsx';
 
 function Header() {
   return (
@@ -15,20 +16,16 @@ function Header() {
         </div>
       </div>
       <div className="flex flex-nowrap">
-        <div>
-          <input type="text" />
-        </div>
-        <div>
-          <button>
-            <DarkModeToggle />
-          </button>
-        </div>
-        <div>
-          <button className="flex flex-nowrap">
-            <img src={imgProfile} />
-            <img src={profileArrow} />
-          </button>
-        </div>
+        <SearchInput />
+        <button>
+          <DarkModeToggle />
+        </button>
+      </div>
+      <div>
+        <button className="flex flex-nowrap">
+          <img src={imgProfile} />
+          <img src={profileArrow} />
+        </button>
       </div>
     </div>
   );
