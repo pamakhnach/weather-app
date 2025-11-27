@@ -8,7 +8,7 @@ import TodayHighlight from '../src/components/TodayHighlight.jsx';
 import Forecast from '../src/components/Forecast.jsx';
 
 createRoot(document.getElementById('root')).render(
-  <div className="bg-black dark:bg-white dark:text-gray-700">
+  <div className="bg-black dark:bg-white dark:text-gray-700 max-w-[1420px] m-auto">
     <Header />
     <div className="flex">
       <div>

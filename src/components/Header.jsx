@@ -6,26 +6,26 @@ import SearchInput from '../section/SearchInput.jsx';
 
 function Header() {
   return (
-    <div className="flex flex-nowrap justify-between">
+    <div className="flex flex-nowrap content-center justify-between pt-[24px] ml-[24px]">
       <div>
         <div>
           <p>Hi, Pavel</p>
         </div>
-        <div className="font-semibold text-2xl dark:bg-red-100">
+        <div className="font-semibold text-2xl">
           <p>Good morning</p>
         </div>
       </div>
-      <div className="flex flex-nowrap">
+      <div className="flex flex-nowrap items-center">
         <SearchInput />
-        <button>
+        <button className="ml-[16px] mr-[24px]">
           <DarkModeToggle />
         </button>
-      </div>
-      <div>
-        <button className="flex flex-nowrap">
-          <img src={imgProfile} />
-          <img src={profileArrow} />
-        </button>
+        <div className="mr-[24px]">
+          <button className="flex flex-nowrap">
+            <img src={imgProfile} />
+            <img src={profileArrow} />
+          </button>
+        </div>
       </div>
     </div>
   );
